@@ -494,4 +494,6 @@ def main():
 
 if __name__ == "__main__":
     print("HELLO MAIN")
-    main()
+    # main()
+    print("FIRST in place 2")
+
