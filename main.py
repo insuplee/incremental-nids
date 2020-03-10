@@ -255,7 +255,6 @@ def draw_bar_graph(res_dict_list, do_eval_online=True, metric="accuracy", desc="
     plt.savefig("{}\\{}_accuracy.png".format(g_fig_dir, title))
 
 
-
 def draw_detailed_online(performance_dict_list, fdr_info=0.001, metric="accuracy", desc="mal-detect",
                          do_kisti=False):
     title = "On-line Setting Process"
@@ -292,7 +291,6 @@ def draw_detailed_online(performance_dict_list, fdr_info=0.001, metric="accuracy
 
         for i, j in zip(annotated_x, annotated_y):
             plt.annotate("{:.3f}".format(j), xy=(i, j), fontsize=g_annotate_font_size)  # value
-
 
     # plt.ylim(0.8, 1.0)
     if do_kisti:
@@ -496,4 +494,3 @@ if __name__ == "__main__":
     print("HELLO MAIN")
     # main()
     print("FIRST in place 2")
-
