@@ -21,7 +21,7 @@ else:
 g_algorithms = ["SGD", "MLP", "NB"]  # g_algorithms = ["Perceptron", "SGD", "PA", "NB", "MLP"]
 g_algorithms = ["SGD", "PA", "NB", "MLP"]
 g_algorithms = ["SGD", "PA", "NB"]
-
+g_algorithms = ["SGD", "PA", "NB", "MLP", "Perceptron", "Multinomial-NB", "Bernoulli-NB"]
 
 g_fdr_alpha_list = [0.001]  # g_fdr_alpha_list = [0.001, 0.01, 0.1, 1]
 g_n_iter = 5
