@@ -3,12 +3,11 @@
 # Author : Insup Lee <islee94@korea.ac.kr>
 # Mar 2020
 
-import os
-
-import matplotlib.pyplot as plt
 from sklearn.linear_model import SGDClassifier, Perceptron, PassiveAggressiveClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neural_network import MLPClassifier
+from main import online_setting
+from data_tlsdnshttp import TlsDnsHttp
 
 
 def print_ref_sites():
@@ -20,6 +19,12 @@ def print_ref_sites():
     print("== all site information ==")
     for site in site_dict:
         print(site, site_dict[site])
+
+
+def opt(clf, fdr_alpha=0.001, n_iter=5):
+    n = TlsDnsHttp(bin_clf=True)
+    X, y = n.fdr_get_data(fdr_alpha=fdr_alpha)
+    performance_dict_list = online_setting(clf, X, y, n_iter=n_iter)  # NOTICE: Debugging 200106
 
 
 def main():
