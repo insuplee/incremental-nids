@@ -3,8 +3,9 @@
 # Author : Insup Lee <islee94@korea.ac.kr>
 # Mar 2020
 
-from sklearn.linear_model import SGDClassifier, Perceptron, PassiveAggressiveClassifier
+from sklearn.linear_model import SGDClassifier, PassiveAggressiveClassifier
 from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import LinearSVC
 from sklearn.neural_network import MLPClassifier
 from main import online_setting
 from data_tlsdnshttp import TlsDnsHttp
@@ -38,6 +39,7 @@ def main():
     for clf in clf_list:
         print(clf.__class__.__name__)
         print(clf.get_params())
+
 
 
 if __name__ == "__main__":
