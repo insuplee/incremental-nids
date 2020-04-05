@@ -22,18 +22,20 @@ g_algorithms = ["SGD", "MLP", "NB"]  # g_algorithms = ["Perceptron", "SGD", "PA"
 g_algorithms = ["SGD", "PA", "NB", "MLP"]
 g_algorithms = ["SGD", "PA", "NB"]
 g_algorithms = ["SGD", "PA", "NB", "MLP", "Perceptron", "Multinomial-NB", "Bernoulli-NB"]
+g_algorithms = ["SGD", "PA", "NB"]
 
 g_fdr_alpha_list = [0.001]  # g_fdr_alpha_list = [0.001, 0.01, 0.1, 1]
-g_n_iter = 5
+# g_n_iter = 5
+g_n_iter = 10
 g_test_size = 0.3
 
 g_fig_dir = "./figures"
 
-g_figsize = (16, 10) #  (8, 5)
+g_figsize = (16, 8) #  (8, 5)
 
 g_title_fontsize = 40  # 15
-g_xlabel_fontsize = 30  # 15
-g_y_label_fontsize = 30  # 14
+g_x_label_fontsize = 40  # 15
+g_y_label_fontsize = 35  # 14
 g_annotate_font_size = 25
 g_x_ticks_font_size = 40
 g_y_ticks_font_size = 30

@@ -38,7 +38,27 @@ g_selected_features_list = [
     "TCP_segment_payload", "cipersuites_candidate", "extension_length", "cert_isExpired"
 ]
 
-# g_selected_features_list = g_possible_features_list[:]
+# 37(보고서언급) - 10(코드에없음) + 4(보고서에없는데 코드에있음) = 31
+_g_selected_features_list = [
+    "filename", "session_key",
+    # protocol,
+    "frame_time",
+    # 패킷길이,
+    "interarrival_time", "src_ip", "dst_ip", "src_port", "dst_port",
+    "TCP_segment_len", "TCP_segment_payload",
+    "ssl_handshake_version",  "cipersuites_candidate", "ciphersuites", "ciphersuites_candidate_length",
+    "extension_support_group", "extension_server_name", "extension_length",
+    "certificate", "cert_startdate", "cert_enddate", "cert_isExpired"
+    # 자기서명 여부 
+    "certificate_length",
+    "http_content_type", "http_server", "http_user_agent",
+    # Method, Host, URI, Accept, Accept-encoding
+    "DNS_qry_name", "DNS_resp_name",
+    # 리턴 IP주소 수, TTL분포차이
+    "DNS_CNAME", "http_request_version", "http_accept_language",  "http_content_length"
+]
+
+g_selected_features_list = g_possible_features_list[:]
 
 
 def extract_feature(all_feature_df, selected_features):

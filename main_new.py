@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Author : Insup Lee <islee94@korea.ac.kr>
-# Jan 2020
+# April 2020
 
 import os
 
@@ -250,9 +250,9 @@ def draw_bar_graph(res_dict_list, do_eval_online=True, metric="accuracy", desc="
             plt.ylim(0.0, 1.0)
     else:  # NSL-KDD
         if metric == "accuracy":
-            plt.ylim(0.9, 1.0)
+            plt.ylim(0.8, 1.0)
         elif metric == "recall":
-            plt.ylim(0.0, 1.0)
+            plt.ylim(0.8, 1.0)
 
     # plt.show()
     plt.savefig("{}\\{}_accuracy.png".format(g_fig_dir, title))
@@ -578,12 +578,12 @@ def main():
     print("################################################################################")
 
     # NOTICE NSL-KDD
-    # experiment_incremental(bin_clf=is_bin_clf, do_eval_online=True, do_kisti=False)
-    # experiment_incremental(bin_clf=is_bin_clf, do_eval_online=False, do_kisti=False)
+    experiment_incremental(bin_clf=is_bin_clf, do_eval_online=True, do_kisti=False)
+    experiment_incremental(bin_clf=is_bin_clf, do_eval_online=False, do_kisti=False)
 
     # NOTICE KISTI
-    experiment_incremental(bin_clf=is_bin_clf, do_eval_online=True, do_kisti=True)
-    experiment_incremental(bin_clf=is_bin_clf, do_eval_online=False, do_kisti=True)
+    #experiment_incremental(bin_clf=is_bin_clf, do_eval_online=True, do_kisti=True)
+    #experiment_incremental(bin_clf=is_bin_clf, do_eval_online=False, do_kisti=True)
 
 
 if __name__ == "__main__":
